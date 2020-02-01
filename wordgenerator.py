@@ -1,4 +1,5 @@
 import itertools
+import wx
 from collections import OrderedDict 
 
 def split(word):
@@ -47,22 +48,29 @@ def generateWords(letters):
 #Takes in all the user input and uses the different functions to find all
 #possible combinations of words
 
-user_input = input("Enter at least three letters to generate words: ")
-number_of_letters = len(user_input)
+#user_input = input("Enter at least three letters to generate words: ")
+#number_of_letters = len(user_input)
 
-letters = split(user_input)
+#letters = split(user_input)
 
-words_generated = generateWords(user_input)
+#words_generated = generateWords(user_input)
 
-output_words = wordChecker(words_generated, load_words())
+#output_words = wordChecker(words_generated, load_words())
 
-wordLengths = wordLengths(output_words)
+#wordLengths = wordLengths(output_words)
 
+app = wx.App()
+
+frame = wx.Frame(None, -1, 'Word Generator')
+
+frame.Show()
+
+app.MainLoop()
 #Basically the main portion of the program
 
-for i in range(len(wordLengths)):
-    print("Words of length", wordLengths[i])
-    for j in range(len(output_words)):
-        if len(output_words[j]) == wordLengths[i]:
-            print(output_words[j])
+#for i in range(len(wordLengths)):
+   # print("Words of length", wordLengths[i])
+    #for j in range(len(output_words)):
+       # if len(output_words[j]) == wordLengths[i]:
+         #   print(output_words[j])
 
