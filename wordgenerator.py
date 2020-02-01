@@ -59,6 +59,7 @@ def generateWords(letters):
 
 #wordLengths = wordLengths(output_words)
 
+#Gui using wx
 app = wx.App()
 
 frame = wx.Frame(None, -1, 'Word Generator')
